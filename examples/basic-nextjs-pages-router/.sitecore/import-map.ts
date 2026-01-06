@@ -9,7 +9,7 @@ import {
 
 import { useEffect } from 'react';
 import React from 'react';
-import { Placeholder, CdpHelper, useSitecore } from '@sitecore-content-sdk/nextjs';
+import { Text, Placeholder, CdpHelper, useSitecore } from '@sitecore-content-sdk/nextjs';
 import Head from 'next/head';
 import client from 'lib/sitecore-client';
 import Image from 'next/image';
@@ -29,6 +29,7 @@ const importMap = [
   {
     module: '@sitecore-content-sdk/nextjs',
     exports: [
+      { name: 'Text', value: Text },
       { name: 'Placeholder', value: Placeholder },
       { name: 'CdpHelper', value: CdpHelper },
       { name: 'useSitecore', value: useSitecore },
