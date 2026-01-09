@@ -1,9 +1,9 @@
 import React from 'react';
-import { Field, Text } from '@sitecore-content-sdk/nextjs';
+import { Field, RichText, RichTextField } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Title: Field<string>;
-  Text: Field<string>;
+  Text: RichTextField;
 }
 
 type MainDetailProps = {
@@ -21,10 +21,10 @@ export const Default = (props: MainDetailProps): React.ReactElement => {
         This container must be refreshed without reloading the page.
       </div>
       <h1 className="component-content title row">
-        <Text field={props.fields.Title} />
+        <RichText field={props.fields.Title} />
       </h1>
       <div className="component-content text row">
-        <Text field={props.fields.Text} />
+        <RichText field={props.fields.Text} />
       </div>
     </div>
   );
