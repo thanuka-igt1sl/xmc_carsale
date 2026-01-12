@@ -3,7 +3,7 @@ import { Field, RichText, RichTextField } from '@sitecore-content-sdk/nextjs';
 
 interface Fields {
   Title: Field<string>;
-  Text: RichTextField;
+  Text: Field<RichTextField>;
 }
 
 type MainDetailProps = {
@@ -24,7 +24,7 @@ export const Default = (props: MainDetailProps): React.ReactElement => {
         <RichText field={props.fields.Title} />
       </h1>
       <div className="component-content text row">
-        <RichText field={props.fields.Text} />
+        <RichText field={props.fields.Text.value} />
       </div>
     </div>
   );
