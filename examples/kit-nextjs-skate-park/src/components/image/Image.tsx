@@ -37,13 +37,7 @@ const ImageDefault: React.FC<ImageProps> = ({ params }) => (
 
 export const Banner: React.FC<ImageProps> = ({ params, fields }) => {
   const { styles, RenderingIdentifier: id } = params;
-  const imageField = fields.Image && {
-    ...fields.Image,
-    value: {
-      ...fields.Image.value,
-      style: { objectFit: "cover", width: "100%", height: "100%" },
-    },
-  };
+  const imageField = fields.Image;
 
   return (
     <div className={`component hero-banner ${styles}`.trim()} id={id}>
