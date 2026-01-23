@@ -65,13 +65,20 @@
     <PackageReference Include="Sitecore.Assemblies.SitecoreHeadlessServicesServer" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\InitializeTestValue.config" />
+    <None Include="App_Config\Include\CustomRoute.config" />
     <None Include="Platform.wpp.targets" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Config\Include\" />
+    <Folder Include="Views\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Logic\InitializeTestValue.cs" />
+    <Compile Include="Routes\RegisterCustomRoutes.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
